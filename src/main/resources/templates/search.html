@@ -6,7 +6,7 @@
 
 <div th:replace="fragments :: page-header"></div>
 
-<div class="container body-content">
+<th:block class="container body-content">
 
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
@@ -37,8 +37,9 @@
     <hr />
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
+   <th:block th:insert="/list-jobs :: job-lister"></th:block>
 
-</div>
+</th:block>
 
 </body>
 </html>
